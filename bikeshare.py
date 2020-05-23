@@ -6,7 +6,7 @@
 
 import time
 import pandas as pd
-import numpy as np
+
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -146,16 +146,16 @@ def time_stats(df):
     start_time = time.time()
 
     # TO DO: display the most common month
-    most_common_month = df['month'].mode()[0]
-    most_common_month = 'The most common Month for {0} during the specified month ({1}) and specified day ({2}) is {3}: '.format(city.title(),month,day,most_common_month)
+    #most_common_month = df['month'].mode()[0]
+    most_common_month = 'The most common Month for {0} during the specified month ({1}) and specified day ({2}) is {3}: '.format(city.title(),month,day,df['month'].mode()[0])
 
     # TO DO: display the most common day of week
-    most_common_day_of_week = df['day'].mode()[0]
-    most_common_day_of_week = 'The most common Day of Week for {0} during the specified month ({1}) and specified day ({2}) is {3}: '.format(city.title(),month,day,most_common_day_of_week)
+    #most_common_day_of_week = df['day'].mode()[0]
+    most_common_day_of_week = 'The most common Day of Week for {0} during the specified month ({1}) and specified day ({2}) is {3}: '.format(city.title(),month,day,df['day'].mode()[0])
 
     # TO DO: display the most common start hour
-    most_common_start_hour = df['start_hour'].mode()[0]
-    most_common_start_hour = 'The most common Start Hour for {0} during the specified month ({1}) and specified day ({2}) is {3}: '.format(city.title(),month,day,most_common_start_hour)
+    #most_common_start_hour = df['start_hour'].mode()[0]
+    most_common_start_hour = 'The most common Start Hour for {0} during the specified month ({1}) and specified day ({2}) is {3}: '.format(city.title(),month,day,df['start_hour'].mode()[0])
 
     print(most_common_month)
     print('\n{0}'.format(most_common_day_of_week))
@@ -171,17 +171,17 @@ def station_stats(df):
     start_time = time.time()
 
     # TO DO: display most commonly used start station
-    most_used_start_station = df['Start Station'].mode()[0]
-    most_used_start_station = 'The most commonly used Start Station for {0} during the specified month ({1}) and specified day ({2}) is {3}: '. format(city.title(),month,day,most_used_start_station)
+    #most_used_start_station = df['Start Station'].mode()[0]
+    most_used_start_station = 'The most commonly used Start Station for {0} during the specified month ({1}) and specified day ({2}) is {3}: '. format(city.title(),month,day,df['Start Station'].mode()[0])
 
     # TO DO: display most commonly used end station
-    most_used_end_station = df['End Station'].mode()[0]
-    most_used_end_station = 'The most commonly used End Station for {0} during the specified month ({1}) and specified day ({2}) is {3}: '. format(city.title(),month,day,most_used_end_station)
+    #most_used_end_station = df['End Station'].mode()[0]
+    most_used_end_station = 'The most commonly used End Station for {0} during the specified month ({1}) and specified day ({2}) is {3}: '. format(city.title(),month,day,df['End Station'].mode()[0])
 
 
     # TO DO: display most frequent combination of start station and end station trip
-    most_used_start_and_end_station = (df['Start Station'] + ' ' + df['End Station']).mode()[0]
-    most_used_start_and_end_station = 'The most commonly used Start and End Station for {0} during the specified month ({1}) and specified day ({2}) is {3}: '. format(city.title(),month,day,most_used_start_and_end_station)
+    #most_used_start_and_end_station = (df['Start Station'] + ' ' + df['End Station']).mode()[0]
+    most_used_start_and_end_station = 'The most commonly used Start and End Station for {0} during the specified month ({1}) and specified day ({2}) is {3}: '. format(city.title(),month,day,(df['Start Station'] + ' ' + df['End Station']).mode()[0])
     print(most_used_start_station)
     print('\n{0}'.format(most_used_end_station))
     print('\n{0}'.format(most_used_start_and_end_station))
@@ -222,16 +222,16 @@ def user_stats(df):
 
     # TO DO: Display counts of user types
     try:
-        user_types = df['User Type'].value_counts()
-        user_types = 'The Count for the Several User Types for {0} during the specified month ({1}) and specified day ({2}) are \n{3}: '.format(city.title(),month,day,user_types)
+        #user_types = df['User Type'].value_counts()
+        user_types = 'The Count for the Several User Types for {0} during the specified month ({1}) and specified day ({2}) are \n{3}: '.format(city.title(),month,day,df['User Type'].value_counts())
     except:
         user_types = 'There is no information about User Type in the city of {0}'.format(city.title())
 
 
     # TO DO: Display counts of gender
     try:
-        gender_count = df['Gender'].value_counts()
-        gender_count = 'The Count of the Several Gender for {0} during the specified month ({1}) and specified day ({2}) are \n{3}: '.format(city.title(),month,day,gender_count)
+        #gender_count = df['Gender'].value_counts()
+        gender_count = 'The Count of the Several Gender for {0} during the specified month ({1}) and specified day ({2}) are \n{3}: '.format(city.title(),month,day,df['Gender'].value_counts())
     except:
         gender_count = 'There is no information about Gender in the city of {0}'.format(city.title())
 
