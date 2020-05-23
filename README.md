@@ -14,6 +14,12 @@ chicago.csv
 new_york_city.csv
 washington.csv
 
+### Updates and Version
+Version 1.0 - January, 2020
+Version 2.0 - February, 2020
+Version 2.1 - March, 2020
+Version 3.0 - April, 2020
+
 
 ### Credits
 docs.python.org (Python Documentation)
