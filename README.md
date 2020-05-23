@@ -1,15 +1,19 @@
 ### Date created
-Include the date you created this project and README file.
+This Project was created on the 29th April, 2020
+The README file was created on the 23rd May, 2020
 
 ### Project Title
-Replace the Project Title
+Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+This project details how to use Python code to import US bike share data and answer interesting questions about it by computing descriptive statistics. It also contains a script that takes in raw input to create an interactive experience in the terminal to present these statistics.
 
 ### Files used
-Include the files used
+The following files were used in the project:
+chicago.csv
+new_york_city.csv
+washington.csv
+
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+docs.python.org (Python Documentation)
