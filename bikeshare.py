@@ -3,7 +3,7 @@
 
 # In[ ]:
 
-
+# Import Useful Libraries
 import time
 import pandas as pd
 import numpy as np
@@ -123,6 +123,7 @@ def load_data(city, month, day):
             print(df.iloc[start_location:(start_location + 5)])
             start_location += 5
             while True:
+
 #Give the user the option of viewing more rows of data or continuing with the program
                 view_display = input("Do you wish to continue with the rest of the code, Type 'CONTINUE' \nOR \nIf you want to view the next 5 Rows of information available for the selected city({0}),month({1}) and day({2}), type 'FIVE'".format(city.title(),month,day))
                 if view_display.lower() =='continue':
@@ -133,9 +134,7 @@ def load_data(city, month, day):
                     start_location += 5
                 else:
                     print('**********Incorrect input, Please type "Continue" or "Five"********************')
-
             break
-
     return df
 
 
